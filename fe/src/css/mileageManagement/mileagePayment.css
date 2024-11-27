@@ -1,0 +1,247 @@
+/* fe\src\components\mileage */
+
+/* MileagePayment */
+
+.mileageContainer {
+    font-family: 'GmarketSansMedium';
+}
+
+.mileageLink {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.mileageLink a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border: 0.2px solid #DEE5D4;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    gap: 0.5rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.mileageLink a.active {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 0 #DEE5D4;
+    font-weight: bold;
+}
+
+.mileageLink a::before {
+    display: inline-block;
+    position: absolute;
+    left: 0.5rem;
+    top: 10%;
+    width: 0.1rem;
+    height: 80%;
+    background: #DEE5D4;
+    content: '';
+}
+
+.mileageLink a.active::before {
+    background-color: white;
+}
+
+.mileageLink a.active .linkname {
+    background-color: #DEE5D4;
+}
+
+.mileageLink a.active .mileageIcon {
+    background: white;
+}
+
+.linkname {
+    background-color: white;
+    padding: 0.5rem 1rem;
+}
+
+.mileageIcon {
+    padding-right: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #dee5d472;
+    width: 2.5rem;
+    object-fit: contain;
+
+
+}
+
+.mileageDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.mileageDescriptionContainer h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: #333;
+    text-align: center;
+}
+
+.mileageDescription {
+    font-family: 'Gyeonggi_Batang_Regular';
+    text-align: center;
+    background-color: #f0f4f8;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 700px;
+
+}
+.balace{
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.redpoint {
+    color: red;
+    font-weight: 700;
+}
+
+.thickpoint {
+    font-weight: 700;
+}
+
+
+/* manualPayment */
+.manualPayment {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #e0e0e082;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.manualPayment p {
+    font-weight: bold;
+    margin: 0.5rem 0; /* 위아래 간격 조정 */
+    text-align: center;
+}
+
+.paymentGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.paymentRadio {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.paymentRadio label {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    text-align: center;
+    min-width: 70px;
+    background-color: white;
+}
+
+.paymentRadio input:nth-of-type(1):checked~label:nth-of-type(1),
+.paymentRadio input:nth-of-type(2):checked~label:nth-of-type(2),
+.paymentRadio input:nth-of-type(3):checked~label:nth-of-type(3) {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 0 #dee5d47a;
+    font-weight: bold;
+    background-color: #dee5d472;
+    
+}
+
+.cardInput {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.cardInput input {
+    width: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cvcInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cvcInput label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.cvcInput input {
+    width: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* AutomaticPayment */
+.automaticPayment{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #e0e0e082;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+}
+.automaticPayment p {
+    font-weight: bold;
+    margin: 0.5rem 0; 
+    text-align: center;
+}
+
+.paymentButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paymentButton {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #749fcd;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    box-shadow: 0 0 4px #749fcd9c;
+    transition: background-color 0.3s ease;
+}
+
+.paymentButton:hover {
+    background-color:#749fcd9c;
+    box-shadow: 2 2 4px #749fcd9c;
+}
+
+.paymentButton:active {
+    background-color: #749fcd9c;
+    transform: scale(0.98);
+}

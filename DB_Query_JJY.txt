@@ -1,0 +1,36 @@
+create database projadb;
+use projadb;
+SET SQL_SAFE_UPDATES = 0;
+drop database projadb;
+create user`projauser`@`%` identified by '1234'; 
+grant all privileges on projadb.* to `projauser`@`%`;
+show tables;
+
+select * from tbl_Community;
+select * from tbl_announce;
+select * from tbl_market;
+select * from tbl_user;
+select * from tbl_market_images;
+select * from tbl_Chat;
+select * from tbl_job ;
+select * from tbl_job where company_name;
+desc tbl_job;
+
+
+drop tables tbl_community;
+drop tables tbl_Announce;
+drop tables tbl_market;
+drop tables tbl_chat;
+drop tables tbl_job;
+
+desc tbl_community;
+desc tbl_Announce;
+desc tbl_market;
+desc tbl_job;
+
+drop tables tbl_gym;
+
+SELECT product_id, recipient_name, sender_name, message, timestamp 
+FROM messages 
+WHERE product_id = 1 
+ORDER BY timestamp ASC;

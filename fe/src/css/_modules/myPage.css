@@ -1,0 +1,55 @@
+.myPageContainer {
+    /* display: flex; */
+    min-height: 80vh;
+    font-family: 'GmarketSansMedium', sans-serif;
+}
+
+.sidebarMenu {
+    padding: 0.5rem; 
+    /* width: 15rem; */
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: #749fcddb; */
+    background-color: #749fcd;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebarList {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.sidebarButton {
+    height: 100%;
+    width: 100%;
+    padding: 0.6rem 2rem; 
+    /* background-color: #749fcd; */
+    color: white; 
+    border-radius: 2px; 
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease;
+    text-shadow: 1px 1px 0  #273a4e;
+    
+}
+
+.sidebarButton:hover {
+    transform: scale(1.05);
+}
+.sidebarButton.active {
+     /* background-color: #749fcd;활성화된 링크의 배경색 */
+    background-color: #749fcddb;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contentArea {
+    flex-grow: 1;
+    margin-left: auto;
+}

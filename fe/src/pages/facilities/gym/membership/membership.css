@@ -1,0 +1,37 @@
+/* GymSignUpPage.css */
+.button-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 버튼 사이 간격 */
+    padding: 0;
+  }
+  
+  .button-item {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* 활성화된 버튼 스타일 */
+  .button-item.active {
+    background-color: #0056b3; /* 클릭된 버튼 강조색 */
+    transform: scale(1.1); /* 클릭된 버튼 살짝 커지게 */
+  }
+  
+  /* 버튼 호버 효과 */
+  .button-item:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* 호버 시 살짝 커짐 */
+  }
+  
+  /* h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+   */

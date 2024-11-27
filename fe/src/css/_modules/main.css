@@ -1,0 +1,105 @@
+/* components\main\MainComponent.js */
+
+
+/* 전체 레이아웃 */
+.mainComponent {
+    min-height: 80vh;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    /* Tailwind의 bg-gray-100 */
+}
+
+.card-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 64rem;
+    /* Tailwind의 max-w-4xl */
+    gap: 1rem;
+    /* Tailwind의 space-x-4 */
+    height: 24rem;
+    /* Tailwind의 h-96 */
+}
+
+/* 카드 스타일 */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    /* Tailwind의 rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Tailwind의 shadow-md */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    flex: 1;
+}
+
+.card.active {
+    flex: 3;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.active img {
+    transform: scale(1.05);
+}
+
+/* 오버레이 스타일 */
+.mainHoverBox {
+    font-family: 'GmarketSansMedium';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tailwind의 bg-black bg-opacity-50 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.card.active .mainHoverBox {
+    opacity: 1;
+}
+
+/* 텍스트 및 버튼 스타일 */
+.card-title {
+    font-size: 1.5rem;
+    /* Tailwind의 text-2xl */
+    font-weight: 600;
+    /* Tailwind의 font-semibold */
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #e5e7eb;
+    /* Tailwind의 text-gray-200 */
+    margin-bottom: 1rem;
+}
+
+.go-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 9999px;
+    /* Tailwind의 rounded-full */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.go-button:hover {
+    background-color: #e5e7eb;
+}
